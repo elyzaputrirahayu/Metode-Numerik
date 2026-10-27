@@ -19,25 +19,25 @@ PAGE = r"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Regular Falsi | Metode Numerik</title>
 <style>
-:root{--navy:#111d35;--navy2:#1d3154;--gold:#d8b56d;--ink:#202b40;--muted:#68758b;--paper:#f4f6fa;--line:#e2e7ef;--white:#fff;--red:#a93245;--green:#176b53}
+:root{--navy:#651b3d;--navy2:#8b2d52;--gold:#e8a0b8;--ink:#382331;--muted:#8c7180;--paper:#fff5f8;--line:#f0dce4;--white:#fff;--red:#a12d57;--green:#7b294d}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif}
 header{background:linear-gradient(125deg,var(--navy),var(--navy2));color:white;padding:34px 20px 68px;border-bottom:5px solid var(--gold)}
 .wrap{max-width:1120px;margin:auto;padding:0 18px}.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:11px;color:var(--gold);font-weight:800}
-h1{font-size:clamp(28px,5vw,42px);margin:12px 0 8px;letter-spacing:-1px}.sub{color:#d8e0ed;max-width:650px;line-height:1.65;margin:0}
+h1{font-size:clamp(28px,5vw,42px);margin:12px 0 8px;letter-spacing:-1px}.sub{color:#f4dfe8;max-width:650px;line-height:1.65;margin:0}
 main{margin-top:-38px;padding-bottom:44px}.layout{display:grid;grid-template-columns:340px minmax(0,1fr);gap:20px;align-items:start}
-.card{background:var(--white);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 32px #1527460c;padding:22px}
-h2{font-size:17px;margin:0 0 18px;color:var(--navy)}label{display:block;font-size:12px;font-weight:800;color:#4c5a70;margin:14px 0 7px}
-select,input{width:100%;border:1px solid #d7deea;border-radius:10px;padding:12px 13px;font:inherit;background:#fff;color:var(--ink);outline:none}
-select:focus,input:focus{border-color:var(--gold);box-shadow:0 0 0 3px #d8b56d2b}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 32px #651b3d0c;padding:22px}
+h2{font-size:17px;margin:0 0 18px;color:var(--navy)}label{display:block;font-size:12px;font-weight:800;color:#755564;margin:14px 0 7px}
+select,input{width:100%;border:1px solid #ead6df;border-radius:10px;padding:12px 13px;font:inherit;background:#fff;color:var(--ink);outline:none}
+select:focus,input:focus{border-color:var(--gold);box-shadow:0 0 0 3px #e8a0b82b}
 button,.download{display:inline-flex;justify-content:center;align-items:center;background:var(--navy);color:white;border:0;border-radius:10px;padding:12px 15px;font-weight:800;cursor:pointer;text-decoration:none}
 button:hover,.download:hover{background:var(--navy2)}.primary{width:100%;margin-top:20px;border-bottom:3px solid var(--gold)}
 .note{font-size:12px;color:var(--muted);line-height:1.6;margin-top:14px}
-.formula{background:#f8f5ed;border:1px solid #efe4ca;padding:14px;border-radius:12px;font-family:Georgia,serif;text-align:center;font-size:17px;margin:14px 0}
-.error{background:#fff0f1;border:1px solid #f1c9cf;color:var(--red);padding:13px;border-radius:11px;margin-bottom:14px}
+.formula{background:#fff2f6;border:1px solid #f1d5e0;padding:14px;border-radius:12px;font-family:Georgia,serif;text-align:center;font-size:17px;margin:14px 0}
+.error{background:#fff0f5;border:1px solid #f0cbd9;color:var(--red);padding:13px;border-radius:11px;margin-bottom:14px}
 .metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}
-.metric{background:#f7f9fc;border:1px solid var(--line);border-radius:12px;padding:13px;min-width:0}.metric span{display:block;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px}.metric strong{display:block;color:var(--navy);font-size:18px;overflow-wrap:anywhere;margin-top:7px}
-.status{font-size:13px;color:var(--green);background:#edf8f3;padding:10px 12px;border-radius:9px;margin-bottom:14px}
-.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;min-width:720px;font-size:12px}th{background:var(--navy);color:white;text-align:right;padding:12px 10px;white-space:nowrap}td{text-align:right;padding:10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}td:first-child,th:first-child{text-align:center}tbody tr:nth-child(even){background:#f8fafd}tbody tr:last-child td{border-bottom:0}.table-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:20px 0 10px}.table-head h2{margin:0}.small{font-size:12px;color:var(--muted)}footer{text-align:center;padding:22px;color:var(--muted);font-size:12px}
+.metric{background:#fff9fb;border:1px solid var(--line);border-radius:12px;padding:13px;min-width:0}.metric span{display:block;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px}.metric strong{display:block;color:var(--navy);font-size:18px;overflow-wrap:anywhere;margin-top:7px}
+.status{font-size:13px;color:var(--green);background:#fceaf1;padding:10px 12px;border-radius:9px;margin-bottom:14px}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;min-width:720px;font-size:12px}th{background:var(--navy);color:white;text-align:right;padding:12px 10px;white-space:nowrap}td{text-align:right;padding:10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}td:first-child,th:first-child{text-align:center}tbody tr:nth-child(even){background:#fff8fb}tbody tr:last-child td{border-bottom:0}.table-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:20px 0 10px}.table-head h2{margin:0}.small{font-size:12px;color:var(--muted)}footer{text-align:center;padding:22px;color:var(--muted);font-size:12px}
 @media(max-width:850px){.layout{grid-template-columns:1fr}.metrics{grid-template-columns:1fr}.metric strong{font-size:16px}header{padding-bottom:60px}}
 </style>
 </head>
